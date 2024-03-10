@@ -23,7 +23,7 @@
       qemu 
       virt-manager
       virt-viewer
-      spice.spice-gtk
+      spice-gtk
       spice-protocol
       win-virt
     ];
