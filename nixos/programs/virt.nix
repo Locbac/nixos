@@ -25,7 +25,6 @@
       virt-viewer
       spice-gtk
       spice-protocol
-      win-virt
     ];
   };
 # FIXME: Change user 'amon' to your user.
