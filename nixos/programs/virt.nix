@@ -27,6 +27,7 @@
       virt-viewer
       spice-gtk
       spice-protocol
+      virtiofsd # required for virtio filesystem passthrough
     ];
   };
 # FIXME: Change user 'amon' to your user.
