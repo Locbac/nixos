@@ -18,6 +18,11 @@
 	  };
 	};
 
+  ## KERNEL
+  boot.kernelParams = [
+    "ahci.mobile_lpm_policy=3"
+  ];
+
   ### TLP
   services.tlp = {
       enable = true;
