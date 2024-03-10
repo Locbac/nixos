@@ -148,7 +148,8 @@
     bluetooth = {
         enable = true;
     };
-    enableRedistributableFirmware = true;
+    enableAllFirmware = true;
+    #enableRedistributableFirmware = true;
   };
 
   ## PATH
