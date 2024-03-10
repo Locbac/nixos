@@ -30,6 +30,11 @@
       virtiofsd # required for virtio filesystem passthrough
     ];
   };
+# The following required for looking-glass.io
+  systemd.tmpfiles.rules = [
+# FIXME: Change user 'amon' to your user.
+    "f /dev/shm/looking-glass 0660 amon kvm -"
+  ];
 # FIXME: Change user 'amon' to your user.
   users = {
     users.amon.extraGroups = [ "libvirtd" ];
