@@ -10,7 +10,7 @@
       nvidia = {
         powerManagement = {
           enable = lib.mkDefault true;
-          finegrained = lib.mkDefault true;
+          #finegrained = lib.mkDefault true;
         };
         package = config.boot.kernelPackages.nvidiaPackages.stable; 
         modesetting.enable = true; 
