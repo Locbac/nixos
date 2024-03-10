@@ -16,7 +16,7 @@
     #home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     # TODO: Add any other flake you might need
-    # hardware.url = "github:nixos/nixos-hardware";
+    hardware.url = "github:nixos/nixos-hardware";
 
     envycontrol = {
       url = "github:bayasdev/envycontrol";

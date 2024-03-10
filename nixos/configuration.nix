@@ -32,6 +32,7 @@
     ./programs/graphical.nix
     ./programs/flatpak.nix
     ./programs/virt.nix
+    ./programs/dellprecision5540.nix
     ./hardware-configuration.nix
   ];
 
