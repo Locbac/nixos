@@ -31,6 +31,7 @@
     ./programs/battery.nix
     ./programs/graphical.nix
     ./programs/flatpak.nix
+    ./programs/virt.nix
     ./hardware-configuration.nix
   ];
 
