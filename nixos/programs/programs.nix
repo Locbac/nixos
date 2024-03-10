@@ -60,6 +60,7 @@
     arandr
     cargo
     nil
+    gparted
     #nerdfonts
     #swww
     #spotify
