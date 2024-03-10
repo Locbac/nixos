@@ -25,6 +25,7 @@
   };
   environment = {
     systemPackages = with pkgs; [ 
+      dconf
       qemu 
       virt-manager
       virt-viewer
