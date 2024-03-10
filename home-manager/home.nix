@@ -105,15 +105,16 @@
         sur="sudo ranger";
         fr="flatpak run";
         ## NIXOS
-        enc="EDITOR=nvim sudoedit ~/.config/nixconf/nixos/configuration.nix";
+        #enc="EDITOR=nvim sudoedit ~/.config/nixconf/nixos/configuration.nix";
+        enc="nvim ~/.config/nixconf/";
         snor="sudo nixos-rebuild switch";
-        snorf="sudo nixos-rebuild switch --flake ~/.config/nixconf/#myNixos";
+        snorf="sudo nixos-rebuild switch --flake ~/.config/nixconf/#nixos";
         hms="home-manager switch";
-        hmsf="home-manager switch --flake ~/.config/home-manager/#amon";
+        hmsf="home-manager switch --flake ~/.config/nixconf/#amon@nixos";
         cnix="cd /etc/nixos/";
         ng="sudo nix-env --list-generations --profile /nix/var/nix/profiles/system";
         nixclean="sudo nix-env --list-generations --profile /nix/var/nix/profiles/system && sudo nix-collect-garbage --delete-older-than 7d && sudo nixos-rebuild switch";
-        nixcleanf="sudo nix-env --list-generations --profile /nix/var/nix/profiles/system && sudo nix-collect-garbage --delete-older-than 7d && sudo nixos-rebuild switch --flake ~/.config/nixconf/#myNixos";
+        nixcleanf="sudo nix-env --list-generations --profile /nix/var/nix/profiles/system && sudo nix-collect-garbage --delete-older-than 7d && sudo nixos-rebuild switch --flake ~/.config/nixconf/#nixos";
       };
       initExtraFirst = ''
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
