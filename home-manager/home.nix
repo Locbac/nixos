@@ -112,6 +112,7 @@
         hms="home-manager switch";
         hmsf="home-manager switch --flake ~/.config/nixconf/#amon@nixos";
         cnix="cd /etc/nixos/";
+        cgnix="cd ~/.config/nixconf/";
         ng="sudo nix-env --list-generations --profile /nix/var/nix/profiles/system";
         nixclean="sudo nix-env --list-generations --profile /nix/var/nix/profiles/system && sudo nix-collect-garbage --delete-older-than 7d && sudo nixos-rebuild switch";
         nixcleanf="sudo nix-env --list-generations --profile /nix/var/nix/profiles/system && sudo nix-collect-garbage --delete-older-than 7d && sudo nixos-rebuild switch --flake ~/.config/nixconf/#nixos";
