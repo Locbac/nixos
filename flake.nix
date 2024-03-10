@@ -32,6 +32,7 @@
     self,
     nixpkgs,
     home-manager,
+    nixos-hardware,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -72,6 +73,7 @@
         modules = [
           # > Our main nixos configuration file <
           ./nixos/configuration.nix
+          nixos-hardware.nixosModules.dell-precision-5530
         ];
       };
     };
