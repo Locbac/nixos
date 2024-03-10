@@ -28,6 +28,7 @@
       spice-gtk
       spice-protocol
       virtiofsd # required for virtio filesystem passthrough
+      looking-glass-client
     ];
   };
 # The following required for looking-glass.io
