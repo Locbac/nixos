@@ -21,6 +21,15 @@
     # ./users.nix
 
     # Import your generated (nixos-generate-config) hardware configuration
+    ./programs/nvidia.nix
+    ./programs/displaylink.nix
+    ./programs/acpi-events.nix
+    ./programs/ntfs-volume.nix
+    ./programs/programs.nix
+    ./programs/syncthing.nix
+    ./programs/suckless.nix
+    ./programs/battery.nix
+    ./programs/graphical.nix
     ./hardware-configuration.nix
   ];
 
@@ -71,28 +80,91 @@
     auto-optimise-store = true;
   };
 
-  # FIXME: Add the rest of your current configuration
-
-  # TODO: Set your hostname
   networking.hostName = "nixos";
+  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # TODO: This is just an example, be sure to use whatever bootloader you prefer
-  boot.loader.systemd-boot.enable = true;
+  # Enable networking
+  networking.networkmanager.enable = true;
 
-  # TODO: Configure your system-wide user settings (groups, etc), add more users as needed.
+  # Set your time zone.
+  time.timeZone = "America/Toronto";
+
+  # Select internationalisation properties.
+  i18n.defaultLocale = "en_CA.UTF-8";
+
+  # Enable the X11 windowing system.
+  services.xserver.enable = true;
+
+
+  # Configure keymap in X11
+  services.xserver = {
+    xkb = {
+      layout = "us";
+      variant = "";
+      };
+  };
+
+  # Enable CUPS to print documents.
+  services.printing.enable = true;
+
+  # Enable sound with pipewire.
+  sound.enable = true;
+  hardware.pulseaudio.enable = false;
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    # If you want to use JACK applications, uncomment this
+    #jack.enable = true;
+
+    # use the example session manager (no others are packaged yet so this is enabled by default,
+    # no need to redefine it in your config for now)
+    #media-session.enable = true;
+  };
+
+  # Enable touchpad support (enabled default in most desktopManager).
+  services.xserver.libinput = {
+      enable = true;
+      touchpad = {
+        clickMethod = "clickfinger";
+        middleEmulation = true;
+        tapping = true;
+        scrollMethod = "twofinger";
+        naturalScrolling = true;
+        tappingButtonMap = "lrm";
+        };
+      mouse = {
+          accelProfile = "flat";
+          accelSpeed = "-0.55";
+        };
+    };
+
+ 
+  boot = {
+      loader = {
+          systemd-boot.enable = true;
+          efi.canTouchEfiVariables = true;
+        };
+      supportedFilesystems = [ "ntfs" ];
+    };
+
   users.users = {
-    # FIXME: Replace with your username
     amon = {
       # TODO: You can set an initial password for your user.
       # If you do, you can skip setting a root password by passing '--no-root-passwd' to nixos-install.
       # Be sure to change it (using passwd) after rebooting!
       #initialPassword = "correcthorsebatterystaple";
       isNormalUser = true;
-      openssh.authorizedKeys.keys = [
-        # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
+      description = "amon";
+      #openssh.authorizedKeys.keys = [ ];
+      extraGroups = [ "networkmanager" "wheel"];
+      packages = with pkgs; [
+        firefox
+      #  thunderbird
       ];
-      # TODO: Be sure to add any other groups you need (such as networkmanager, audio, docker, etc)
-      extraGroups = ["wheel"];
+      shell = pkgs.zsh;
     };
   };
 

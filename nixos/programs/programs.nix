@@ -1,0 +1,67 @@
+{ config, pkgs, inputs, ... }:
+{
+  programs.zsh.enable = true;
+  environment.systemPackages = with pkgs; [
+    neovim
+    neofetch
+    gnome.gnome-tweaks
+    git
+    keepassxc
+    syncthing
+    gnome-extension-manager
+    stow
+    gnumake
+    wget
+    cmake
+    curl
+    #minilibx
+    dwm
+    zsh
+    stdenv
+    oh-my-zsh
+    gcc
+    tlp
+    auto-cpufreq
+    ranger
+    rofi
+    #rofi-wayland
+    xclip
+    dmenu
+    dwmblocks
+    slock
+    st
+    feh
+    lxappearance
+    alacritty
+    picom
+    mpv
+    trash-cli
+    kitty
+    acpi
+    wirelesstools
+    steam-run
+    #patchelf
+    flatpak
+    #dpkg
+    dell-command-configure
+    acpid
+    auto-cpufreq
+    home-manager
+    powertop
+    dunst
+    libnotify
+    networkmanagerapplet
+    copyq
+    #jq
+    inputs.envycontrol.packages.x86_64-linux.default
+    pciutils
+    python3
+    python311Packages.pip
+    arandr
+    cargo
+    nil
+    #nerdfonts
+    #swww
+    #spotify
+  ];
+}

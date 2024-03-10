@@ -51,6 +51,118 @@
     username = "amon";
     homeDirectory = "/home/amon";
   };
+  home.sessionVariables = {
+    EDITOR = "nvim";
+  };
+
+
+  programs = {
+    git = {
+      enable = true;
+      userName = "Locbac";
+      userEmail = "martinhost003@gmail.com";
+      };
+    zsh = {
+      enable = true;
+      enableAutosuggestions = true;
+      enableCompletion = true;
+      shellAliases = 
+      {
+        ## LISTING
+        ll="ls -alF";
+        la="ls -A";
+        l="ls -CF";
+        ## NALA
+        ni="sudo nala install";
+        nr="sudo nala remove";
+        na="sudo nala update";
+        nu="sudo nala upgrade";
+        nf="sudo nala fetch";
+        nrr="sudo nala clean && sudo nala autoremove && sudo nala autopurge";
+        ## PACMAN
+        pci="sudo pacman -Sy";
+        pcr="sudo pacman -R";
+        ## MAKE
+        smci="sudo make clean install";
+        smi="sudo make install";
+        ## GIT
+        gpf="git add . && git commit -m 'push' && git push";
+        gc="git clone";
+        ## SHUTDOWN REBOOT
+        ssn="sudo shutdown now";
+        sr="sudo reboot";
+        ## SCRIPTS
+        tg="~/clones/grayscale-desktop/toggle-monitor-grayscale.sh";
+        ## MISC
+        sme="sudo chmod +x";
+        rmallgitdir="rm -rf .git*";
+        sn="EDITOR=nvim sudoedit";
+        ## VMs
+        looking-glass="looking-glass-client -m 97 -c DXGI";
+        ## RUNNERS
+        neo="neofetch";
+        r="ranger";
+        sur="sudo ranger";
+        fr="flatpak run";
+        ## NIXOS
+        enc="EDITOR=nvim sudoedit ~/.config/nixconf/nixos/configuration.nix";
+        snor="sudo nixos-rebuild switch";
+        snorf="sudo nixos-rebuild switch --flake ~/.config/nixconf/#myNixos";
+        hms="home-manager switch";
+        hmsf="home-manager switch --flake ~/.config/home-manager/#amon";
+        cnix="cd /etc/nixos/";
+        ng="sudo nix-env --list-generations --profile /nix/var/nix/profiles/system";
+        nixclean="sudo nix-env --list-generations --profile /nix/var/nix/profiles/system && sudo nix-collect-garbage --delete-older-than 7d && sudo nixos-rebuild switch";
+        nixcleanf="sudo nix-env --list-generations --profile /nix/var/nix/profiles/system && sudo nix-collect-garbage --delete-older-than 7d && sudo nixos-rebuild switch --flake ~/.config/nixconf/#myNixos";
+      };
+      initExtraFirst = ''
+      source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+      #POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+      '';
+      initExtra = ''
+      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+      '';
+      oh-my-zsh = {
+        enable = true;
+        plugins = [ 
+        "git" 
+        ];
+        #theme = "powerlevel9k";
+      };
+    };
+    ranger = {
+      enable = true;
+      mappings = {
+          md = "console mkdir%space";
+      };
+    };
+  };
+
+  gtk = {
+      enable = true;
+      cursorTheme = {
+        package = pkgs.apple-cursor;
+        name = "macOS-BigSur";
+        };
+      iconTheme = {
+        package = pkgs.whitesur-icon-theme;
+        name = "WhiteSur-dark";
+        };
+      theme = {
+        package = pkgs.whitesur-gtk-theme;
+        name = "WhiteSur-Dark";
+        };
+    };
+
+  qt = {
+      enable = true;
+      platformTheme = "gtk";
+      style.name = "WhiteSur-Dark";
+    };
+
+  xresources.properties = {
+      "Xft.dpi" = 110;
+    };
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
@@ -58,7 +170,6 @@
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
-  programs.git.enable = true;
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
