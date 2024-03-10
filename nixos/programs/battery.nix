@@ -1,7 +1,10 @@
 { inputs, outputs, lib, config, pkgs, ... }:
 {
   ## POWER
-  powerManagement.enable = true;
+  powerManagement = {
+    enable = true;
+    cpuFreqGovernor = "schedutil";
+  };
   services.power-profiles-daemon.enable = false;
   services.auto-cpufreq.enable = true;
   services.auto-cpufreq.settings = {
