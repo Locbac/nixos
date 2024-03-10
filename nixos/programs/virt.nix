@@ -5,7 +5,6 @@
   programs.dconf.enable = true;
   virtualisation.libvirtd = {
     enable = true;
-    enableKVM = true;
     qemu = {
       package = pkgs.qemu_kvm;
       runAsRoot = true;
