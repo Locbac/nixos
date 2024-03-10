@@ -30,6 +30,7 @@
     ./programs/suckless.nix
     ./programs/battery.nix
     ./programs/graphical.nix
+    ./programs/flatpak.nix
     ./hardware-configuration.nix
   ];
 
@@ -141,6 +142,16 @@
         };
     };
 
+  ## HARDWARE
+  hardware = {
+    bluetooth = {
+        enable = true;
+    };
+    enableRedistributableFirmware = true;
+  };
+
+  ## PATH
+  environment.localBinInPath = true;
  
   boot = {
       loader = {
