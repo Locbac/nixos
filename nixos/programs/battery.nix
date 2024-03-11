@@ -5,18 +5,22 @@
     enable = true;
     #cpuFreqGovernor = "schedutil";
   };
-  services.power-profiles-daemon.enable = false;
-  services.auto-cpufreq.enable = true;
-  services.auto-cpufreq.settings = {
-	  battery = {
-	     governor = "powersave";
-	     turbo = "never";
-	  };
-	  charger = {
-	     governor = "performance";
-	     turbo = "auto";
-	  };
-	};
+  services = {
+    power-profiles-daemon.enable = false;
+    auto-cpufreq = {
+      enable = true;
+      settings = {
+        battery = {
+          governor = "powersave";
+          turbo = "never";
+        };
+        charger = {
+          governor = "performance";
+          turbo = "auto";
+        };
+      };
+    };
+  };
 
   ### KERNEL
   boot.kernelParams = [
