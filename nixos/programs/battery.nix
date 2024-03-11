@@ -25,15 +25,15 @@
 
   ### KERNEL
   boot.kernelParams = [
-    "ahci.mobile_lpm_policy=3"
-    "rtc_cmos.use_acpi_alarm=1"
+    #"ahci.mobile_lpm_policy=3"
+    #"rtc_cmos.use_acpi_alarm=1"
     "intel_pstate=disable"
   ];
 
   ### HWP
-  systemd.tmpfiles.rules = [
-    "w /sys/devices/system/cpu/cpufreq/policy*/energy_performance_preference - - - - balance_power"
-  ];
+  #systemd.tmpfiles.rules = [
+    #"w /sys/devices/system/cpu/cpufreq/policy*/energy_performance_preference - - - - balance_power"
+  #];
 
   ### TLP
   services.tlp = {
