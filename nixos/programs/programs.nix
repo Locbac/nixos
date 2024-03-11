@@ -61,6 +61,7 @@
     cargo
     nil
     gparted
+    qbittorrent
     #nerdfonts
     #swww
     #spotify
