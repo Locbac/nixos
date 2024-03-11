@@ -74,6 +74,7 @@
           # > Our main nixos configuration file <
           ./nixos/configuration.nix
           nixos-hardware.nixosModules.dell-precision-5530
+          nixos-hardware.nixosModules.common-gpu-nvidia-disable
         ];
       };
     };
