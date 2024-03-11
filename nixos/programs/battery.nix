@@ -67,7 +67,11 @@
   };
 
   ### SYSTEM 76 SCHEDULER
-  services.system76-scheduler.settings.cfsProfiles.enable = true;
+  services.system76-scheduler = {
+    enable = true;
+    useStockConfig = true;
+    settings.cfsProfiles.enable = true;
+  };
 
   ### POWERTOP
   #powerManagement.powertop.enable = true;
