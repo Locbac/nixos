@@ -32,6 +32,7 @@
     ./programs/graphical.nix
     ./programs/flatpak.nix
     ./programs/virt.nix
+    ./programs/firmware-precision.nix
     ./hardware-configuration.nix
   ];
 
