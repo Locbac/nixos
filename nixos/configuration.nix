@@ -33,6 +33,7 @@
     ./programs/flatpak.nix
     ./programs/virt.nix
     ./programs/firmware-precision.nix
+    ./programs/nfs.nix
     ./hardware-configuration.nix
   ];
 
