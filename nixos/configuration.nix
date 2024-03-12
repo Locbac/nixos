@@ -25,7 +25,7 @@
     ./programs/displaylink.nix
     ./programs/acpi-events.nix
     ./programs/auto-mount-ntfs-volume.nix
-    ./programs/auto-mount-nfs-share.nix
+    #./programs/auto-mount-nfs-share.nix
     ./programs/programs.nix
     ./programs/syncthing.nix
     ./programs/suckless.nix
