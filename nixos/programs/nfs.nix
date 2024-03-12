@@ -14,8 +14,10 @@
     allowedTCPPorts = [ 111  2049 4000 4001 4002 20048 ];
     allowedUDPPorts = [ 111 2049 4000 4001  4002 20048 ];
   };
-  security.wrappers = {
-    mount.source = "${pkgs.utillinux}/bin/mount";
-    umount.source = "${pkgs.utillinux}/bin/umount";
+  security.wrappers."mount.nfs" = {
+    setuid = true;
+    owner = "root";
+    group = "root";
+    source = "${pkgs.nfs-utils.out}/bin/mount.nfs";
   };
 }
