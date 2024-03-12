@@ -1,0 +1,1 @@
+../../proj/nixos/.config/nixconf/configuration.nix
