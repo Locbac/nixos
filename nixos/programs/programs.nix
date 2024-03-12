@@ -62,6 +62,7 @@
     nil
     gparted
     qbittorrent
+    remmina
     #nerdfonts
     #swww
     #spotify
