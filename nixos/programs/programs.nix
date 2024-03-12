@@ -63,6 +63,7 @@
     gparted
     qbittorrent
     remmina
+    yt-dlp
     #nerdfonts
     #swww
     #spotify
