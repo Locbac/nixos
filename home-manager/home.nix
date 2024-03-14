@@ -68,6 +68,8 @@
       enableCompletion = true;
       shellAliases = 
       {
+        ## MOUNTS
+        mnfs="sudo mount 192.168.0.101:/OldNerd /home/amon/windows-nfs";
         ## LISTING
         ll="ls -alF";
         la="ls -A";
