@@ -64,7 +64,6 @@
     qbittorrent
     remmina
     yt-dlp
-    spotify
     #nerdfonts
     #swww
   ];
