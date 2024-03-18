@@ -4,7 +4,7 @@
   ## POWER
   powerManagement = {
     enable = true;
-    #cpuFreqGovernor = "schedutil";
+    cpuFreqGovernor = "schedutil";
   };
   services = {
     power-profiles-daemon.enable = false;
@@ -68,11 +68,11 @@
   };
 
   ### SYSTEM 76 SCHEDULER
-  services.system76-scheduler = {
-    enable = true;
-    useStockConfig = true;
-    settings.cfsProfiles.enable = true;
-  };
+  #services.system76-scheduler = {
+  #  enable = true;
+  #  useStockConfig = true;
+  #  settings.cfsProfiles.enable = true;
+  #};
 
   ### POWERTOP
   #powerManagement.powertop.enable = true;
