@@ -64,6 +64,7 @@
     qbittorrent
     remmina
     yt-dlp
+    zotero
     #nerdfonts
     #swww
   ];
