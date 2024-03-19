@@ -65,6 +65,7 @@
     remmina
     yt-dlp
     zotero
+    calyx-vpn
     #nerdfonts
     #swww
   ];
