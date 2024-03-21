@@ -66,6 +66,7 @@
     yt-dlp
     zotero
     calyx-vpn
+    albert
     #nerdfonts
     #swww
   ];
