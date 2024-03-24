@@ -27,6 +27,7 @@
     ./programs/auto-mount-ntfs-volume.nix
     #./programs/auto-mount-nfs-share.nix
     ./programs/programs.nix
+    ./programs/obs-studio.nix
     ./programs/syncthing.nix
     ./programs/suckless.nix
     ./programs/battery.nix
