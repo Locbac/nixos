@@ -67,6 +67,7 @@
     zotero
     calyx-vpn
     albert
+    ffmpeg
     #nerdfonts
     #swww
   ];
