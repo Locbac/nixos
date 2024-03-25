@@ -68,6 +68,7 @@
     calyx-vpn
     albert
     ffmpeg
+    protonvpn-gui
     #nerdfonts
     #swww
   ];
