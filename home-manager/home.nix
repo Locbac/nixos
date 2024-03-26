@@ -71,6 +71,7 @@
         ## MOUNTS
         mnfs="sudo mount 192.168.0.101:/OldNerd /home/amon/windows-nfs";
         mmp="sudo mount --mkdir /dev/disk/by-uuid/2C06855C068527C2 '/media/amon/My Passport'";
+        um="sudo umount /run/media/amon/My\ Passport /run/media/amon/Ventoy /run/media/amon/Gargantuan";
         ## LISTING
         ll="ls -alF";
         la="ls -A";
