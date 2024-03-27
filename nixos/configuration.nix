@@ -36,6 +36,7 @@
     ./programs/virt.nix
     ./programs/firmware-precision.nix
     ./programs/nfs.nix
+    ./programs/spotify-adblock.nix
     ./hardware-configuration.nix
   ];
 
