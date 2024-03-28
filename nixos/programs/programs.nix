@@ -69,6 +69,7 @@
     albert
     ffmpeg
     protonvpn-gui
+    bottles
     #nerdfonts
     #swww
   ];
