@@ -143,7 +143,7 @@
         };
       mouse = {
           accelProfile = "flat";
-          accelSpeed = "-0.55";
+          accelSpeed = "-0.4";
         };
     };
 
