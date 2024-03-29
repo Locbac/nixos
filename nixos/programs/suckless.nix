@@ -14,7 +14,7 @@
   ## OVERLAYS
   nixpkgs.overlays = [
   	(final: prev:{
-  dwm = prev.dwm.overrideAttrs (old: { 
+  dwm = prev.dwm.overrideAttrs (old: {
   	src = /home/amon/proj/home/clones/dwm-flexipatch; 
       buildInputs = old.buildInputs ++ [ final.imlib2 final.xorg.libXrender final.xorg.libXext final.fontconfig ]; 
       });
