@@ -53,14 +53,6 @@
             "/dev/input/by-id/usb-Razer_Razer_BlackWidow_V3_Tenkeyless-event-kbd",
             "/dev/input/by-id/usb-Razer_Razer_Basilisk_X_HyperSpeed-event-mouse"
     ]
-    group_device_acl = [
-            "/dev/null", "/dev/full", "/dev/zero", 
-            "/dev/random", "/dev/urandom",
-            "/dev/ptmx", "/dev/kvm", "/dev/kqemu",
-            "/dev/rtc","/dev/hpet",
-            "/dev/input/by-id/usb-Razer_Razer_BlackWidow_V3_Tenkeyless-event-kbd",
-            "/dev/input/by-id/usb-Razer_Razer_Basilisk_X_HyperSpeed-event-mouse"
-    ]
   ]
   '';
   services.persistent-evdev.devices = {
