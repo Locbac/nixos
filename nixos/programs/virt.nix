@@ -38,7 +38,7 @@
   ];
 # FIXME: Change user 'amon' to your user.
   users = {
-    users.amon.extraGroups = [ "libvirtd" ];
+    users.amon.extraGroups = [ "libvirtd" "virt-manager" ];
     groups.libvirtd.members = [ "root" "amon" ];
   };
 }
