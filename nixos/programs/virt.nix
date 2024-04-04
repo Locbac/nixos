@@ -38,25 +38,25 @@
   ];
 # FIXME: Change user 'amon' to your user.
   users = {
-    users.amon.extraGroups = [ "libvirtd" "virt-manager" ];
+    users.amon.extraGroups = [ "libvirtd" ];
     groups.libvirtd.members = [ "root" "amon" ];
   };
 
 # QEMU.CONF FILE DOWN BELOW
-  virtualisation.libvirtd.qemu.verbatimConfig = ''
-  namespaces = [
-    cgroup_device_acl = [
-            "/dev/null", "/dev/full", "/dev/zero", 
-            "/dev/random", "/dev/urandom",
-            "/dev/ptmx", "/dev/kvm", "/dev/kqemu",
-            "/dev/rtc","/dev/hpet",
-            "/dev/input/by-id/usb-Razer_Razer_BlackWidow_V3_Tenkeyless-event-kbd",
-            "/dev/input/by-id/usb-Razer_Razer_Basilisk_X_HyperSpeed-event-mouse"
-    ]
-  ]
-  '';
-  services.persistent-evdev.devices = {
-    persist-mouse0 = "usb-Razer_Razer_Basilisk_X_HyperSpeed-event-mouse";
-    persist-keyboard0 = "usb-Razer_Razer_BlackWidow_V3_Tenkeyless-event-kbd";
-  };
+# virtualisation.libvirtd.qemu.verbatimConfig = ''
+# namespaces = [
+#   cgroup_device_acl = [
+#           "/dev/null", "/dev/full", "/dev/zero", 
+#           "/dev/random", "/dev/urandom",
+#           "/dev/ptmx", "/dev/kvm", "/dev/kqemu",
+#           "/dev/rtc","/dev/hpet",
+#           "/dev/input/by-id/usb-Razer_Razer_BlackWidow_V3_Tenkeyless-event-kbd",
+#           "/dev/input/by-id/usb-Razer_Razer_Basilisk_X_HyperSpeed-event-mouse"
+#   ]
+# ]
+# '';
+# services.persistent-evdev.devices = {
+#   persist-mouse0 = "usb-Razer_Razer_Basilisk_X_HyperSpeed-event-mouse";
+#   persist-keyboard0 = "usb-Razer_Razer_BlackWidow_V3_Tenkeyless-event-kbd";
+# };
 }
