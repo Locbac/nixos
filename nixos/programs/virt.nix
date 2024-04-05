@@ -32,8 +32,8 @@
     ];
   };
 # The following required for looking-glass.io
-  systemd.tmpfiles.rules = [
 # FIXME: Change user 'amon' to your user.
+  systemd.tmpfiles.rules = [
     "f /dev/shm/looking-glass 0660 amon kvm -"
   ];
 # FIXME: Change user 'amon' to your user.
