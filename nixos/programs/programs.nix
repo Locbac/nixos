@@ -70,6 +70,7 @@
     ffmpeg
     protonvpn-gui
     bottles
+    htop
     #nerdfonts
     #swww
   ];
