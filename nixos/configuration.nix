@@ -166,6 +166,7 @@
         efi.canTouchEfiVariables = true;
       };
     supportedFilesystems = [ "ntfs" ];
+    kernelParams = [ "mitigations=off" ];
   };
 
   users.users = {
