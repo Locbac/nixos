@@ -36,6 +36,7 @@
     ./programs/virt.nix
     ./programs/firmware-precision.nix
     ./programs/nfs.nix
+    ./programs/optimizations.nix
     ./hardware-configuration.nix
   ];
 
@@ -166,7 +167,6 @@
         efi.canTouchEfiVariables = true;
       };
     supportedFilesystems = [ "ntfs" ];
-    kernelParams = [ "mitigations=off" ];
   };
 
   users.users = {
