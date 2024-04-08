@@ -1,5 +1,8 @@
 { inputs, outputs, lib, config, pkgs, ... }:
 {
   boot.kernelParams = [ "mitigations=off" ];
-  systemd.user.units.NetworkManager-wait-online.enable = false;
+  systemd.services.NetworkManager-wait-online.service = {
+    enable = false;
+    restartIfChanged = false;
+  };
 }
