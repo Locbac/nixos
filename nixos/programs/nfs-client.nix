@@ -1,13 +1,5 @@
 { inputs, outputs, lib, config, pkgs, ... }:
 {
-  services.nfs.server = {
-    enable = true;
-    # fixed rpc.statd port; for firewall
-    lockdPort = 4001;
-    mountdPort = 4002;
-    statdPort = 4000;
-    extraNfsdConfig = '''';
-  };
   networking.firewall = {
     enable = true;
       # for NFSv3; view with `rpcinfo -p`
