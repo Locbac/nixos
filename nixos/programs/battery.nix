@@ -27,7 +27,7 @@
   boot.kernelParams = [
     #"ahci.mobile_lpm_policy=3"
     #"rtc_cmos.use_acpi_alarm=1"
-    "intel_pstate=disable"
+    #"intel_pstate=disable"
   ];
 
   ### HWP
