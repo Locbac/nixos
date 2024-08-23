@@ -2,12 +2,14 @@
 {
   # DISPLAY MANAGERS DESKTOP ENVS ETC
   ## GNOME
-  #services.xserver.displayManager.gdm.enable = true;
-  #services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
+    ## EXTENSIONS
+    environment.systemPackages = with pkgs; [ gnomeExtensions.appindicator ];
   ## KDE PLASMA
-  services.xserver.displayManager.sddm.enable = true;
+  #services.xserver.displayManager.sddm.enable = true;
   #services.xserver.desktopManager.plasma5.enable = true;
-  services.xserver.desktopManager.plasma6.enable = true;
+  #services.xserver.desktopManager.plasma6.enable = true;
 
   ## HYPRLAND
   programs.hyprland = {

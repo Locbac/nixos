@@ -145,19 +145,19 @@
   };
 
   gtk = {
-      #enable = true;
-      #cursorTheme = {
-      #  package = pkgs.apple-cursor;
-      #  name = "macOS-BigSur";
-      #  };
-      #iconTheme = {
-      #  package = pkgs.whitesur-icon-theme;
-      #  name = "WhiteSur-dark";
-      #  };
-      #theme = {
-      #  package = pkgs.whitesur-gtk-theme;
-      #  name = "WhiteSur-Dark";
-      #  };
+      enable = true;
+      cursorTheme = {
+        package = pkgs.apple-cursor;
+        name = "macOS-BigSur";
+        };
+      iconTheme = {
+        package = pkgs.whitesur-icon-theme;
+        name = "WhiteSur-dark";
+        };
+      theme = {
+        package = pkgs.whitesur-gtk-theme;
+        name = "WhiteSur-Dark";
+        };
     };
 
   qt = {
@@ -169,6 +169,20 @@
   xresources.properties = {
       "Xft.dpi" = 110;
     };
+
+  
+  dconf = {
+	  enable = true;
+	  #settings."org/gnome/shell" = {
+	  #  disable-user-extensions = false;
+	  #  enabled-extensions = with pkgs.gnomeExtensions; [
+	  #    blur-my-shell.extensionUuid
+	  #    gsconnect.extensionUuid
+	  #    dash-to-dock.extensionUuid
+	  #    bedtime-mode.extensionUuid
+	  #    ];
+	  #  };
+  };
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
