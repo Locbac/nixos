@@ -23,6 +23,7 @@
     # Import your generated (nixos-generate-config) hardware configuration
     ./programs/nvidia.nix
     ./programs/displaylink.nix
+    ./programs/fonts.nix
     #./programs/acpi-events.nix
     #./programs/auto-mount-ntfs-volume.nix
     #./programs/auto-mount-nfs-share.nix
