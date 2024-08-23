@@ -2,10 +2,11 @@
 {
   ## NVIDIA
   specialisation = { 
-  environment.systemPackages = [ nvidia-offload ];
     nvidia.configuration = { 
      # Nvidia Configuration 
      services.xserver.videoDrivers = [ "nvidia" ]; 
+     environment.systemPackages = [ nvidia-offload ];
+     nvidiaSettings = true;
      hardware = {
       opengl.enable = true;
       nvidia = {
