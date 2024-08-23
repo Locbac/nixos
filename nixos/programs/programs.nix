@@ -71,6 +71,7 @@
     protonvpn-gui
     bottles
     htop
+    dislocker
     #nerdfonts
     #swww
   ];

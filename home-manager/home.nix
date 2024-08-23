@@ -145,19 +145,19 @@
   };
 
   gtk = {
-      enable = true;
-      cursorTheme = {
-        package = pkgs.apple-cursor;
-        name = "macOS-BigSur";
-        };
-      iconTheme = {
-        package = pkgs.whitesur-icon-theme;
-        name = "WhiteSur-dark";
-        };
-      theme = {
-        package = pkgs.whitesur-gtk-theme;
-        name = "WhiteSur-Dark";
-        };
+      #enable = true;
+      #cursorTheme = {
+      #  package = pkgs.apple-cursor;
+      #  name = "macOS-BigSur";
+      #  };
+      #iconTheme = {
+      #  package = pkgs.whitesur-icon-theme;
+      #  name = "WhiteSur-dark";
+      #  };
+      #theme = {
+      #  package = pkgs.whitesur-gtk-theme;
+      #  name = "WhiteSur-Dark";
+      #  };
     };
 
   qt = {
