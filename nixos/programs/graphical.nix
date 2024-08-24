@@ -3,7 +3,14 @@
   # DISPLAY MANAGERS DESKTOP ENVS ETC
   ## GNOME
   services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.desktopManager.gnome = {
+  enable = true;
+  extraGSettingsOverridePackages = [ pkgs.gnome.mutter ];
+  extraGSettingsOverrides = ''
+    [org.gnome.mutter]
+    experimental-features=['scale-monitor-framebuffer']
+  '';
+  };
     ## EXTENSIONS
     environment.systemPackages = with pkgs; [ gnomeExtensions.appindicator ];
   ## KDE PLASMA
