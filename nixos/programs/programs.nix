@@ -72,6 +72,7 @@
     bottles
     htop
     dislocker
+    zoxide
     #nerdfonts
     #swww
   ];
