@@ -73,6 +73,7 @@
     htop
     dislocker
     zoxide
+    pcsx2
     #nerdfonts
     #swww
   ];

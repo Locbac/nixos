@@ -109,6 +109,7 @@
         sur="sudo ranger";
         fr="flatpak run";
         n="nvim";
+        cd="z"; #zoxide
         ## NIXOS
         #enc="EDITOR=nvim sudoedit ~/.config/nixconf/nixos/configuration.nix";
         enc="nvim ~/.config/nixconf/";

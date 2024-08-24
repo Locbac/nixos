@@ -2,7 +2,7 @@
 {
   ## AUTO-MOUNT NTFS STORAGE
   fileSystems."/run/media/amon/Storage" =
-    { device = "/dev/disk/by-uuid/E6CCD727CCD6F0B3";
+    { device = "/dev/disk/by-uuid/E070AFBE70AF9A34";
       fsType = "ntfs-3g"; 
       options = [ "rw" "uid=1000"];
     };
