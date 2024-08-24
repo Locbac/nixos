@@ -108,6 +108,7 @@
         r="ranger";
         sur="sudo ranger";
         fr="flatpak run";
+        n="nvim";
         ## NIXOS
         #enc="EDITOR=nvim sudoedit ~/.config/nixconf/nixos/configuration.nix";
         enc="nvim ~/.config/nixconf/";
@@ -124,6 +125,7 @@
       initExtraFirst = ''
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
       #POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+      eval "$(zoxide init zsh)"
       '';
       initExtra = ''
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
