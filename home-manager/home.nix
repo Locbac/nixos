@@ -157,17 +157,17 @@
         package = pkgs.whitesur-icon-theme;
         name = "WhiteSur-dark";
         };
-      theme = {
-        package = pkgs.whitesur-gtk-theme;
-        name = "WhiteSur-Dark";
-        };
+  #    theme = {
+  #      package = pkgs.whitesur-gtk-theme;
+  #      name = "WhiteSur-Dark";
+  #      };
     };
 
-  qt = {
-      enable = true;
-      platformTheme = "gtk";
-      style.name = "WhiteSur-Dark";
-    };
+  #qt = {
+  #    enable = true;
+  #    platformTheme = "gtk";
+  #    style.name = "WhiteSur-Dark";
+  #  };
 
   xresources.properties = {
       "Xft.dpi" = 110;
