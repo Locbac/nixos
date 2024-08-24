@@ -2,28 +2,28 @@
 {
   # DISPLAY MANAGERS DESKTOP ENVS ETC
   ## GNOME
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome = {
-  enable = true;
-  extraGSettingsOverridePackages = [ pkgs.gnome.mutter ];
-  extraGSettingsOverrides = ''
-    [org.gnome.mutter]
-    experimental-features=['scale-monitor-framebuffer']
-  '';
-  };
-    ## EXTENSIONS
-    environment.systemPackages = with pkgs; [ gnomeExtensions.appindicator ];
+  #services.xserver.displayManager.gdm.enable = true;
+  #services.xserver.desktopManager.gnome = {
+  #enable = true;
+  #extraGSettingsOverridePackages = [ pkgs.gnome.mutter ];
+  #extraGSettingsOverrides = ''
+  #  [org.gnome.mutter]
+  #  experimental-features=['scale-monitor-framebuffer']
+  #'';
+  #};
+  #  ## EXTENSIONS
+  #  environment.systemPackages = with pkgs; [ gnomeExtensions.appindicator ];
   ## KDE PLASMA
-  #services.xserver.displayManager.sddm.enable = true;
+  services.xserver.displayManager.sddm.enable = true;
   #services.xserver.desktopManager.plasma5.enable = true;
-  #services.xserver.desktopManager.plasma6.enable = true;
+  services.xserver.desktopManager.plasma6.enable = true;
 
   ## HYPRLAND
-  programs.hyprland = {
-  	enable = true;
+  #programs.hyprland = {
+  	#enable = true;
     #enableNvidiaPatches = true;
-    xwayland.enable = true;
-  };
+    #xwayland.enable = true;
+  #};
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";
     NIXOS_OZONE_WL = "1";
