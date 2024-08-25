@@ -2,6 +2,6 @@
 {
   services.xserver.videoDrivers = [ "displaylink" "modesetting" ];
   environment.systemPackages = with pkgs; [
-  	displaylink
+  	unstable.displaylink
   ];
 }
